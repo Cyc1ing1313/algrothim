@@ -3,6 +3,26 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "iostream": "cpp",
-        "list": "cpp"
+        "__bit_reference": "cpp",
+        "__hash_table": "cpp",
+        "__string": "cpp",
+        "__tree": "cpp",
+        "__undef_macros": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "deque": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "list": "cpp",
+        "locale": "cpp",
+        "ratio": "cpp",
+        "streambuf": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "complex": "cpp",
+        "__functional_03": "cpp",
+        "__mutex_base": "cpp",
+        "optional": "cpp",
+        "memory": "cpp"
     }
 }
