@@ -25,6 +25,7 @@ public:
         for(int i=index;i<nums.size();i++){
             if(visit.count(nums[i])) continue;
             visit.insert(nums[i]);
+            
             swap(nums[index],nums[i]);
             dfs(nums,index+1);
             swap(nums[index],nums[i]);
