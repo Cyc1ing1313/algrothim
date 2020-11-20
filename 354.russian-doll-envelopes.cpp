@@ -7,9 +7,12 @@
 // @lc code=start
 #include<vector>
 #include<algorithm>
+#include<string>
+#include<unordered_map>
 using namespace std;
 class Solution {
 public:
+    unordered_map<string,int> memo;
     bool static cmp(const vector<int>& a,const vector<int>& b){
         if(a[0]==b[0]){
             return a[1]>b[1];
@@ -17,6 +20,7 @@ public:
             return a[0]<b[0];
         }
     }
+
     int maxEnvelopes(vector<vector<int>>& envelopes) {
     
         int n = envelopes.size();
