@@ -55,8 +55,27 @@ char *data;
 int *pc, *bp, *sp, ax, cycle;
 
 void next() {
-  token = *src++;
-  return;
+  char *last_pos;
+  int hash;
+  while (token = *src) {
+    ++src;
+    if (token == '\n') {
+      ++line;
+    } else if (token == '#') {
+      while (*src != 0 && *src != '\n') {
+        src++;
+      }
+    } else if ((token >= 'a' && token <= 'z') ||
+               (token >= 'A' && token <= 'Z') || (token == '_')) {
+      last_pos = src - 1;
+      hash = token;
+      while ((*src >= 'a' && *src <= 'z') || (*src >= 'A' && *src <= 'Z') ||
+             (*src >= '0' && *src <= '9') || (*src == '_')) {
+        hash = hash * 147 + *src;
+        src++;
+      }
+    }
+  }
 }
 
 void program() { //语法分析
