@@ -2,7 +2,7 @@
 using namespace std;
 
 const int N = 5 * 1e6 + 10;
-int idx = 0, m, n,s;
+int idx = 0, m, n,s,a,b;
 int head[N], deepth[N], parent[N][32];
 struct node
 {
@@ -58,10 +58,12 @@ int main()
 {
     cin>>n>>m>>s;
     n--;
+    cin>>a>>b;
     while(n--){
-        add()
+        add(a,b);
+        add(b,a);
     }
     while(m--){
-        
+        cout<<lca(a,b);
     }
 }
